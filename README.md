@@ -81,45 +81,53 @@ This repository contains a full-stack portfolio tracker application built with a
 
 ---
 
-## Deployment Instructions
+## Deployment
 
 ### Backend Deployment (Heroku)
-1. Install Heroku CLI:
-   ```bash
-   https://devcenter.heroku.com/articles/heroku-cli
-   ```
-2. Login to Heroku:
+1. **Install Heroku CLI**:
+   Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+2. **Login to Heroku**:
    ```bash
    heroku login
    ```
-3. Create a Heroku app:
+3. **Create a Heroku App**:
    ```bash
    heroku create portfolio-tracker-backend
    ```
-4. Add JawsDB MySQL:
+4. **Add JawsDB MySQL Add-on**:
    ```bash
    heroku addons:create jawsdb:kitefin
    ```
-5. Deploy to Heroku:
+5. **Deploy Backend**:
+   Push your backend code to Heroku:
    ```bash
    git init
    git add .
    git commit -m "Deploy Backend"
    git push heroku main
    ```
-6. Update environment variables:
+6. **Set API Key Environment Variable**:
+   Add the API key for stock price fetching:
    ```bash
    heroku config:set API_KEY=your_alpha_vantage_api_key
    ```
+7. **Access Deployed Backend**:
+   Your backend is now live at: `https://your-heroku-app-url.herokuapp.com`
 
 ### Frontend Deployment (Netlify)
-1. Build the React app:
+1. **Build the React App**:
    ```bash
    npm run build
    ```
-2. Upload the `build` folder to Netlify:
-   - Drag and drop the folder.
-   - Set environment variable `REACT_APP_API_URL` to the Heroku backend URL.
+2. **Upload to Netlify**:
+   - Go to [Netlify](https://www.netlify.com/).
+   - Drag and drop the `build` folder into the dashboard.
+3. **Set API URL Environment Variable**:
+   Configure the API URL for the frontend:
+   - In Netlify, go to **Site Settings > Environment Variables**.
+   - Add `REACT_APP_API_URL` with the value: `https://your-heroku-app-url.herokuapp.com`.
+4. **Access Deployed Frontend**:
+   Your frontend is now live at: `https://your-netlify-app-url.netlify.app`.
 
 ---
 
@@ -138,3 +146,4 @@ This repository contains a full-stack portfolio tracker application built with a
 
 ---
 
+## Thank You
