@@ -138,5 +138,3 @@ This repository contains a full-stack portfolio tracker application built with a
 
 ---
 
-## Contact
-For any questions, reach out to [your_email@example.com].
